@@ -19,7 +19,7 @@ class LanguagePreference {
             // When this is the first time, we save a localStorage varriable.
             localStorage.setItem("alreadyFirstTime", true);
             // Now we will know if we should set a new language for the user or not.
-            // So now, we set a language by his geolocation.
+            // So now, we set a language by his browser's default language
             localStorage.setItem("preferedLanguage", navigator.language.includes("-") ? navigator.language.split("-")[0] : navigator.language);
         } // No else case needed, this user was there at least once, so this preference is already set to him.
         this.reloadAllLanguageResources();
