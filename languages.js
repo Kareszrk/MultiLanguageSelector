@@ -21,7 +21,11 @@ class LanguagePreference {
             // Now we will know if we should set a new language for the user or not.
             // So now, we set a language by his browser's default language
             localStorage.setItem("preferedLanguage", navigator.language.includes("-") ? navigator.language.split("-")[0] : navigator.language);
-        } // No else case needed, this user was there at least once, so this preference is already set to him.
+            // We make a queryable parameter, to check what the current language is.
+            this.currentLanguage = navigator.language.includes("-") ? navigator.language.split("-")[0] : navigator.language;
+        } else {
+            this.currentLanguage = localStorage.getItem("preferedLanguage");
+        }
         this.reloadAllLanguageResources();
     }
     // Reload all langauge resources
@@ -36,12 +40,14 @@ class LanguagePreference {
     }
 
     // Change language method
+    // Change language method
     ChangeClientFrontEndLanguagePreference = (languageTo) => {
         // Here we check if the selected language exists or not.
         if(this.languages[languageTo]){
             // Language exists, so we change the preference to that language.
             localStorage.setItem("preferedLanguage", languageTo);
             this.reloadAllLanguageResources();
+            this.currentLanguage = languageTo;
         } else {
             // The selected language does not exist in the languages list.
             // We now just output an error message to the user.
