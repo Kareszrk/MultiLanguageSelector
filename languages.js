@@ -37,9 +37,15 @@ class LanguagePreference {
             all_language_elements[i].innerHTML = this.languages[selectedLanguage][all_language_elements[i].getAttribute("data-languagePartIdentifier")];
             i++;
         }
+        
+        let allPlaceHolders = document.querySelectorAll("[data-placeholder]");
+        let p = 0;
+        while(p < allPlaceHolders.length){
+            allPlaceHolders[p].setAttribute("placeholder", this.languages[selectedLanguage][allPlaceHolders[p].getAttribute("data-placeholder")]);
+            p++;
+        }
     }
 
-    // Change language method
     // Change language method
     ChangeClientFrontEndLanguagePreference = (languageTo) => {
         // Here we check if the selected language exists or not.
