@@ -31,13 +31,26 @@ class LanguagePreference {
     // Reload all langauge resources
     reloadAllLanguageResources = () => {
         let selectedLanguage = localStorage.getItem('preferedLanguage') ? localStorage.getItem('preferedLanguage') : "en";
+        // For all language material rawly called from the website
         let all_language_elements = document.querySelectorAll("[data-languagePartIdentifier]");
         let i = 0;
         while(i < all_language_elements.length){
-            all_language_elements[i].innerHTML = this.languages[selectedLanguage][all_language_elements[i].getAttribute("data-languagePartIdentifier")];
+            // We need to check if current element from all_language_elements contains data-toggle="tooltip" attribute, because if it contains we don't want to change the text
+            if(all_language_elements[i].getAttribute("data-toggle") != "tooltip"){
+                // It does not contain, so we can apply the required text
+                all_language_elements[i].innerHTML = this.languages[selectedLanguage][all_language_elements[i].getAttribute("data-languagePartIdentifier")];
+            }
             i++;
         }
-        
+        // For bootstrap 5 tooltips
+        let all_tooltips = document.querySelectorAll("[data-toggle='tooltip']");
+        let j = 0;
+        while(j < all_tooltips.length){
+            all_tooltips[j].setAttribute("title", this.languages[selectedLanguage][all_tooltips[j].getAttribute("data-languagePartIdentifier")]);
+            j++;
+        }
+
+        // For all the placeholder requirements, where we want multiple language support on a placeholder.
         let allPlaceHolders = document.querySelectorAll("[data-placeholder]");
         let p = 0;
         while(p < allPlaceHolders.length){
