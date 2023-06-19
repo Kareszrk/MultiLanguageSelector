@@ -52,10 +52,10 @@ class LanguagePreference {
 
         // For bulma.io tooltips
         let all_tooltips_bulma = document.querySelectorAll("[data-tool-languagePartIdentifier]");
-        let j = 0;
-        while(j < all_tooltips_bulma.length){
-            all_tooltips_bulma[j].setAttribute("data-tooltip", this.languages[selectedLanguage][all_tooltips_bulma[j].getAttribute("data-tool-languagePartIdentifier")]);
-            j++;
+        let bulTooltip = 0;
+        while(bulTooltip < all_tooltips_bulma.length){
+            all_tooltips_bulma[bulTooltip].setAttribute("data-tooltip", this.languages[selectedLanguage][all_tooltips_bulma[bulTooltip].getAttribute("data-tool-languagePartIdentifier")]);
+            bulTooltip++;
         }
         
         // For all the placeholder requirements, where we want multiple language support on a placeholder.
