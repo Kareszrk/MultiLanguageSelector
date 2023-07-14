@@ -65,6 +65,16 @@ class LanguagePreference {
             allPlaceHolders[p].setAttribute("placeholder", this.languages[selectedLanguage][allPlaceHolders[p].getAttribute("data-placeholder")]);
             p++;
         }
+
+        // For all website tour requirements, (requires TourGuideJS)
+        // Find all elements with both data-tr-languagepartidentifier and data-tg-order attributes
+        let allWebsiteTourElements = document.querySelectorAll("[data-tr-languagepartidentifier][data-tg-order]");
+        let tourElementsIndex = 0;
+        while(tourElementsIndex < allWebsiteTourElements.length){
+            // Set the value of the data-tg-tour attribute to the languageIdentifier
+            allWebsiteTourElements[tourElementsIndex].setAttribute("data-tg-tour", this.languages[selectedLanguage][allWebsiteTourElements[tourElementsIndex].getAttribute("data-tr-languagepartidentifier")]);
+            tourElementsIndex++;
+        }
     }
 
     // Change language method
