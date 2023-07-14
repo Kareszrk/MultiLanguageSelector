@@ -1,28 +1,43 @@
-# MultiLanguageSelector - Native/Vanilla JavaScript (Client only)
-My very simple method on how to change the website's language without even a single page refresh. Client friendly. No useless javascript running code.
+# MultiLanguageSelector - Native/Vanilla JavaScript (Client-Side)
 
-## This code supports the following:
-- You can apply your own language: WelcomeText to whatever element you want. E.g. headers, paragraphs, anchors, buttons, etc...
+This repository presents a simple and effective method for changing the language of a website without needing to refresh the page. It prioritizes client-friendly operations and minimizes unnecessary JavaScript code execution.
 
-Usage as attribute on HTML element: **data-languagePartIdentifier="WelcomeText"**
+## Features
 
-- You can apply your own language: WelcomeText on any placeholder
+With this code, you can associate your custom language strings with various elements on your website. Here are a few examples:
 
-Usage as attribute on HTML element: **data-placeholder="WelcomeText"**
+- **General Elements**: Apply your language strings to any HTML element, such as headers, paragraphs, anchors, buttons, and more.
 
-- You can apply your own language WelcomeText on any tooltip (This implementation requires bootstrap 5 to be loaded)
+  Use the attribute on an HTML element: `data-languagePartIdentifier="WelcomeText"`
 
-Usage as attribute on HTML element: **data-toggle="tooltip" data-placement="top" data-languagePartIdentifier="WelcomeText"**
+- **Placeholders**: Assign your language strings to any placeholder.
 
-- You can apply your own language WelcomeText on any tooltip (This implementation requires bulma.io to be loaded)
+  Use the attribute on an HTML element: `data-placeholder="WelcomeText"`
 
-Usage as attribute on HTML element: **data-tool-languagePartIdentifier="WelcomeText"**
+- **Tooltips**: Add your language strings to any tooltip. Note that these implementations require either Bootstrap 5 or Bulma.io to be loaded.
 
-#### Live Preview
-[Live Preview](https://kareszrk.github.io/MultiLanguageSelector/ "Live Preview")
+  For Bootstrap 5, use the attributes on an HTML element: 
 
-#### In Production enviorement
-[Production Live Preview](https://iranyaszallas.hu/ "Production Live Preview")
+  `data-toggle="tooltip" data-placement="top" data-languagePartIdentifier="WelcomeText"`
+  
+  For Bulma.io, use the attribute on an HTML element: 
+  
+  `data-tool-languagePartIdentifier="WelcomeText"`
 
-##### [Official bootstrap 5 tooltip documentation](https://getbootstrap.com/docs/5.0/components/tooltips/ "Bootstrap 5 tooltip documentation")
-##### [Bulma.io tooltip documentation](https://wikiki.github.io/elements/tooltip/ "Bulma.io tooltip documentation")
+- **TourGuide JS Support**: If you use TourGuide JS, this code is compatible with it as well!
+
+  Use the following two attributes to apply the language you want:
+
+  `data-tr-languagepartidentifier="WelcomeText" data-tg-order="0"`
+
+## Live Previews
+
+- [Demo Site](https://kareszrk.github.io/MultiLanguageSelector/ "Demo Site")
+- [Production Example](https://iranyaszallas.hu/ "Production Example")
+
+## Additional Resources
+
+- [Bootstrap 5 Tooltip Documentation](https://getbootstrap.com/docs/5.0/components/tooltips/ "Bootstrap 5 Tooltip Documentation")
+- [Bulma.io Tooltip Documentation](https://wikiki.github.io/elements/tooltip/ "Bulma.io Tooltip Documentation")
+
+Feel free to explore and utilize this code to suit your multilingual website needs.
