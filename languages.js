@@ -19,8 +19,9 @@ class LanguagePreference {
             // When this is the first time, we save a localStorage varriable.
             localStorage.setItem("alreadyFirstTime", true);
             // Now we will know if we should set a new language for the user or not.
-            // So now, we set a language by his browser's default language
-            localStorage.setItem("preferedLanguage", navigator.language.includes("-") ? navigator.language.split("-")[0] : navigator.language);
+            // So now, we set a language by his browser's default language in case of that can be found in the supported languages.
+            if(Object.keys(this.languages).includes(navigator.language.split("-")[0])) localStorage.setItem("preferedLanguage", navigator.language.includes("-") ? navigator.language.split("-")[0] : navigator.language);
+            else localStorage.setItem("preferedLanguage", "en");
             // We make a queryable parameter, to check what the current language is.
             this.currentLanguage = navigator.language.includes("-") ? navigator.language.split("-")[0] : navigator.language;
         } else {
