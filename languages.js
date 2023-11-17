@@ -23,7 +23,7 @@ class LanguagePreference {
             if(Object.keys(this.languages).includes(navigator.language.split("-")[0])) localStorage.setItem("preferedLanguage", navigator.language.includes("-") ? navigator.language.split("-")[0] : navigator.language);
             else localStorage.setItem("preferedLanguage", "en");
             // We make a queryable parameter, to check what the current language is.
-            this.currentLanguage = navigator.language.includes("-") ? navigator.language.split("-")[0] : navigator.language;
+            this.currentLanguage = localStorage.getItem("preferedLanguage");
         } else {
             this.currentLanguage = localStorage.getItem("preferedLanguage");
         }
