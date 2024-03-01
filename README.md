@@ -35,6 +35,9 @@ With this code, you can associate your custom language strings with various elem
 - [Demo Site](https://kareszrk.github.io/MultiLanguageSelector/ "Demo Site")
 - [Production Example](https://iranyaszallas.hu/ "Production Example")
 
+> [!NOTE]
+> The bootstrap 5, bulma etc... are not included in the file. But below you can find useful links to grab them.
+
 ## Additional Resources
 
 - [Bootstrap 5 Tooltip Documentation](https://getbootstrap.com/docs/5.0/components/tooltips/ "Bootstrap 5 Tooltip Documentation")
