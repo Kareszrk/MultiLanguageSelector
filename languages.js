@@ -39,7 +39,7 @@ class LanguagePreference {
             // We need to check if current element from all_language_elements contains data-toggle="tooltip" attribute, because if it contains we don't want to change the text
             if(all_language_elements[i].getAttribute("data-toggle") != "tooltip"){
                 // It does not contain, so we can apply the required text
-                all_language_elements[i].innerHTML = this.languages[selectedLanguage][all_language_elements[i].getAttribute("data-languagePartIdentifier")];
+                all_language_elements[i].textContent = this.languages[selectedLanguage][all_language_elements[i].getAttribute("data-languagePartIdentifier")];
             }
             i++;
         }
@@ -95,3 +95,6 @@ class LanguagePreference {
 }
 
 let languagePreferencesSystem = new LanguagePreference();
+document.addEventListener('DOMContentLoaded', () => {
+    languagePreferencesSystem.reloadAllLanguageResources();
+});
