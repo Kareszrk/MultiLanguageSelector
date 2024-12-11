@@ -35,7 +35,7 @@ With this code, you can associate your custom language strings with various elem
 - [Demo Site](https://kareszrk.github.io/MultiLanguageSelector/ "Demo Site")
 - [Production Example](https://iranyaszallas.hu/ "Production Example")
 
-> [!NOTE]
+> [!IMPORTANT]
 > The bootstrap 5, bulma etc... are not included in the repo but below you can find useful links to grab them.
 
 ## Additional Resources
