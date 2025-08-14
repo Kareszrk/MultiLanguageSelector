@@ -42,5 +42,6 @@ With this code, you can associate your custom language strings with various elem
 
 - [Bootstrap 5 Tooltip Documentation](https://getbootstrap.com/docs/5.0/components/tooltips/ "Bootstrap 5 Tooltip Documentation")
 - [Bulma.io Tooltip Documentation](https://wikiki.github.io/elements/tooltip/ "Bulma.io Tooltip Documentation")
+- [View technical description](https://github.com/Kareszrk/MultiLanguageSelector/blob/main/TECHNICAL.md)
 
 Feel free to explore and utilize this code to suit your multilingual website needs.
