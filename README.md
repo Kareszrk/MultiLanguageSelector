@@ -36,6 +36,7 @@ With this code, you can associate your custom language strings with various elem
 - [Production Example](https://iranyaszallas.hu/ "Production Example")
 - [Production Example 2](https://karoly.dev/ "Production Example 2")
 - [Production Example 3](https://tshe.info/ "Production Example 3")
+- [Production Example 4](https://salvoxvard.com/ "Production Example 4")
 
 > [!IMPORTANT]
 > The bootstrap 5, bulma etc... are not included in the repo but below you can find useful links to grab them.
